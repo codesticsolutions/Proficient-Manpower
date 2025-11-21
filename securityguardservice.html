@@ -317,21 +317,50 @@
                     <div class="col-auto">
                         <div class="header-button d-flex align-items-center" style="gap:8px;">
                             <!-- Compact Helpline button -->
-                            <a href="tel:+923453478801"
-                                 aria-label="Call Helpline +92 345 3478801"
-                                 style="display:inline-flex; align-items:center; gap:8px; background:linear-gradient(90deg,#0b5fd6 0%,#00a3ff 100%); color:#fff; padding:5px 10px; border-radius:20px; text-decoration:none; font-weight:600; box-shadow:0 4px 12px rgba(11,95,214,0.10); font-size:13px;"
-                                 onmouseover="this.style.transform='translateY(-2px) scale(1.02)'; this.style.boxShadow='0 8px 20px rgba(11,95,214,0.14)';"
-                                 onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(11,95,214,0.10)';"
-                                 onfocus="this.style.outline='2px solid rgba(255,255,255,0.12)'; this.style.outlineOffset='3px';"
-                                 onblur="this.style.outline='none';">
-                                <span style="display:inline-flex; width:30px; height:30px; align-items:center; justify-content:center; background:rgba(255,255,255,0.12); border-radius:50%; font-size:13px;">
-                                    <i class="fas fa-phone-alt" style="color:#fff; font-size:13px;" aria-hidden="true"></i>
-                                </span>
-                                <span style="display:flex; flex-direction:column; line-height:1;">
-                                    <span style="font-size:10px; opacity:0.95; line-height:1;">Helpline</span>
-                                    <span style="font-size:13px; font-weight:700; line-height:1;">0345-3478801</span>
-                                </span>
-                            </a>
+                          <a href="https://wa.me/923453478801"
+    target="_blank"
+    aria-label="Chat on WhatsApp"
+    style="
+        display:inline-flex; 
+        align-items:center; 
+        gap:6px; 
+        background:#25D366; 
+        color:#fff; 
+        padding:4px 10px; 
+        border-radius:20px; 
+        text-decoration:none; 
+        font-weight:600; 
+        box-shadow:0 2px 8px rgba(0,0,0,0.12); 
+        font-size:11px;
+    "
+    onmouseover="this.style.transform='scale(1.05)'"
+    onmouseout="this.style.transform='none'">
+
+    <!-- Icon Only -->
+    <span style="
+        display:inline-flex; 
+        width:22px; 
+        height:22px; 
+        align-items:center; 
+        justify-content:center; 
+        background:rgba(255,255,255,0.20); 
+        border-radius:50%; 
+        font-size:12px;
+    ">
+        <i class="fab fa-whatsapp" style="color:#fff; font-size:12px;"></i>
+    </span>
+
+    <!-- Text -->
+    <span class="wh-text" style="
+        display:flex; 
+        flex-direction:column; 
+        line-height:1;
+    ">
+        <span style="font-size:8px; opacity:0.95; line-height:1;">WhatsApp</span>
+        <span style="font-size:11px; font-weight:700; line-height:1;">0345-3478801</span>
+    </span>
+</a>
+
 
                             <!-- Mobile menu toggle -->
                             <button type="button" class="th-menu-toggle d-block d-lg-none ms-2" style="background:transparent; border:none; color:inherit; font-size:20px;">
