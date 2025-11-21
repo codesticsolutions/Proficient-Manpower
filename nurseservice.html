@@ -314,10 +314,10 @@
                     </div>
 
                     <!-- Buttons + Helpline (Right side) -->
-                    <div class="col-auto">
+                   <div class="col-auto">
                         <div class="header-button d-flex align-items-center" style="gap:8px;">
                             <!-- Compact Helpline button -->
-                           <a href="https://wa.me/923453478801"
+<a href="https://wa.me/923453478801"
     target="_blank"
     aria-label="Chat on WhatsApp"
     style="
@@ -362,6 +362,23 @@
 </a>
 
 
+<!-- 🔹 Responsive Inline CSS (Display Logic) -->
+<style>
+    /* Mobile: Hide Text, make button circular */
+    @media (max-width: 575px) {
+        .wh-text {
+            display: none !important;
+        }
+        .wh-btn, a[href*="3478801"] {
+            padding:6px !important;
+            border-radius:50px !important;
+            gap:0 !important;
+        }
+    }
+</style>
+
+
+
                             <!-- Mobile menu toggle -->
                             <button type="button" class="th-menu-toggle d-block d-lg-none ms-2" style="background:transparent; border:none; color:inherit; font-size:20px;">
                                 <i class="far fa-bars" aria-hidden="true"></i>
@@ -369,7 +386,6 @@
                             </button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
