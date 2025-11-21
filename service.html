@@ -21,10 +21,10 @@
     <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
-     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png">
+     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/Proficient man power icon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/Proficient man power icon.jpg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/Proficient man power icon.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/Proficient man power icon.jpg">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
@@ -43,12 +43,7 @@
 </head>
 
 <body>
-    <div class="preloader">
-        <button class="th-btn preloaderCls">Cancel Preloader</button>
-        <div class="preloader-inner">
-            <div class="loader"></div>
-        </div>
-    </div>
+    
 
     <div class="popup-search-box d-none d-lg-block">
         <button class="searchClose"><i class="fal fa-times"></i></button>
@@ -58,34 +53,94 @@
         </form>
     </div>
 
-  <div class="th-menu-wrapper">
-        <div class="th-menu-area text-center">
-            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+       <!-- 07: Mobile menu wrapper -->
+   <div class="th-menu-wrapper">
+    <div class="th-menu-area text-center">
+
+        <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+
+        <div class="mobile-logo">
             <a href="index.html">
-                    <img src="assets/img/logo.png" alt="Kleanix" style="width:100px; height:100px; display:block;">
-                </a>
-            <div class="th-mobile-menu">
-                <ul>
-                                    <li>
-                                        <a href="index.html">Home</a>  
-                                    </li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li >
-                                        <a href="service.html">Services</a>                    
-                                    </li>
-                                    <!-- <li>
-                                        <a href="blog.html">Blog</a>    
-                                    </li> -->
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-            </div>
+                <img src="assets/img/Proficient man power logo-02.png" alt="Kleanix" style="width:300px; height:80px; display:block;">
+            </a>
+        </div>
+
+        <div class="th-mobile-menu">
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+
+                <!-- SERVICES DROPDOWN -->
+                <li class="has-submenu">
+                    <a href="#">
+                        Services 
+                        <i class="fas fa-chevron-down dropdown-icon" style="margin-left:6px; font-size:0.9em; transition:0.3s;"></i>
+                    </a>
+
+                    <ul class="sub-menu" style="display:none; padding-left:15px;">
+                        <li><a href="maidservice.html">Maid Services</a></li>
+                        <li><a href="nannyservice.html">Babysitter / Nanny</a></li>
+                        <li><a href="attendentservice.html">Patient Attendant</a></li>
+                        <li><a href="service.html">Cook / Chef</a></li>
+                        <li><a href="service.html">Driver Services</a></li>
+                        <li><a href="service.html">Office Boy</a></li>
+                        <li><a href="service.html">Security Guard</a></li>
+                        <li><a href="service.html">Housekeeping Staff</a></li>
+                        <li><a href="service.html">Receptionist</a></li>
+                    </ul>
+                </li>
+
+                <!-- FOREIGN STAFF DROPDOWN -->
+                <li class="has-submenu">
+                    <a href="#">
+                        Foreign Staff
+                        <i class="fas fa-chevron-down dropdown-icon" style="margin-left:6px; font-size:0.9em; transition:0.3s;"></i>
+                    </a>
+
+                    <ul class="sub-menu" style="display:none; padding-left:15px;">
+                        <li><a href="service.html">Filipino Maid</a></li>
+                        <li><a href="service.html">Nigerian Maid</a></li>
+                        <li><a href="service.html">Sirilankan Maid</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
         </div>
     </div>
+</div>
+
+<!-- INLINE JS -->
+<script>
+    document.querySelectorAll(".has-submenu > a").forEach(item => {
+        item.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            let parent = this.parentElement;
+            let submenu = parent.querySelector(".sub-menu");
+            let icon = this.querySelector(".dropdown-icon");
+
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+                icon.style.transform = "rotate(0deg)";
+            } else {
+                submenu.style.display = "block";
+                icon.style.transform = "rotate(180deg)";
+            }
+        });
+    });
+</script>
 
 
-     <header class="th-header header-default">
+
+    
+    <!-- 08: Header -->
+    <header class="th-header header-default">
    
-  <div class="topbar d-none d-lg-block" role="region" aria-label="Top bar"
+   <!-- ⭐ TOP BAR START -->
+<div class="topbar d-none d-lg-block" role="region" aria-label="Top bar"
     style="background: linear-gradient(90deg,#0b5fd6 0%,#00a3ff 50%,#7b5cff 100%); color:#fff; padding:4px 0; box-shadow:0 4px 18px rgba(11,95,214,0.12); font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:1;">
     <div class="topbar-container"
         style="max-width:1200px; margin:0 auto; padding:0 16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
@@ -116,7 +171,7 @@
                   style="width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.08); border-radius:6px; color:#fff; font-size:12px; transition: transform .14s ease, background-color .14s ease, color .14s ease, box-shadow .14s ease; will-change: transform, background-color, color;">
                 <i class="fas fa-clock" aria-hidden="true" style="font-size:12px;"></i>
              </span>
-             <span style="font-size:12px;">Tue - Sat 08:00 AM – 05:00 PM</span>
+             <span style="font-size:12px;">Tue - Sat 09:00 AM – 06:00 PM</span>
           </div>
        </div>
 
@@ -133,14 +188,14 @@
              <i class="fab fa-facebook-f" aria-hidden="true" style="font-size:13px;"></i>
           </a>
 
-          <a class="social-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+          <a class="social-btn" href="https://wa.me/923453478801" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
             style="width:30px; height:30px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; text-decoration:none; background:rgba(0,0,0,0.12); transition: transform .14s ease, background-color .14s ease, color .14s ease, box-shadow .14s ease; will-change: transform, background-color, color; font-size:13px;"
             onmouseover="this.style.background='#ffffff'; this.style.color='#0b5fd6'; this.style.transform='translateY(-2px) scale(1.04)'; this.style.boxShadow='0 8px 20px rgba(11,95,214,0.12)';"
             onmouseout="this.style.background='rgba(0,0,0,0.12)'; this.style.color='#fff'; this.style.transform='none'; this.style.boxShadow='none';"
             onfocus="this.style.background='#ffffff'; this.style.color='#0b5fd6'; this.style.transform='translateY(-2px) scale(1.04)'; this.style.boxShadow='0 8px 20px rgba(11,95,214,0.12)'; this.style.outline='2px solid rgba(255,255,255,0.12)'; this.style.outlineOffset='3px';"
             onblur="this.style.background='rgba(0,0,0,0.12)'; this.style.color='#fff'; this.style.transform='none'; this.style.boxShadow='none'; this.style.outline='none';"
             >
-             <i class="fab fa-linkedin-in" aria-hidden="true" style="font-size:13px;"></i>
+             <i class="fab fa-whatsapp" aria-hidden="true" style="font-size:13px;"></i>
           </a>
 
           <a class="social-btn" href="https://www.instagram.com/proficient_manpower/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
@@ -181,9 +236,11 @@
       })();
     </script>
 </div>
+<!-- ⭐ TOP BAR END -->
+
 
     <!-- Main Header -->
-     <div class="sticky-wrapper">
+    <div class="sticky-wrapper">
         <div class="menu-area" style="padding:4px 0;">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
@@ -191,7 +248,7 @@
                     <div class="col-auto">
                         <div class="header-logo">
                             <a href="index.html">
-                                <img src="assets/img/logo.png" style="width:80px; height:auto;" alt="Kleanix">
+                                <img src="assets/img/Proficient man power logo-02.png" style="width:200px; height:auto;" alt="Kleanix">
                             </a>
                         </div>
                     </div>
@@ -200,12 +257,63 @@
                     <div class="col-auto d-none d-lg-inline-block">
                         <nav class="main-menu" style="font-size:14px;">
                             <ul style="display:flex; gap:16px; margin:0; padding:0; list-style:none;">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="service.html">Services</a></li>
-                                <!-- <li><a href="blog.html">Blog</a></li> -->
-                                <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="has-submenu">
+                            <a href="#">Services</a>
+                            <ul class="sub-menu">
+                                <li><a href="maidservice.html">Maid Services</a></li>
+                                <li><a href="nannyservice.html">Babysitter / Nanny</a></li>
+                                <li><a href="attendentservice.html">Patient Attendant</a></li>
+                                <li><a href="cookservice.html">Cook / Chef</a></li>
+                                <li><a href="driverservice.html">Driver Services</a></li>
+                                <li><a href="officeboyservice.html">Office Boy</a></li>
+                                <li><a href="securityguardservice.html">Security Guard</a></li>
+                                <li><a href="housekeepingservice.html">Housekeeping Staff</a></li>
+                                <li><a href="nurseservice.html">Nurse</a></li>
                             </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="#">Foreign Staff <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true" style="margin-left:6px; font-size:0.9em;"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="filipinomaid.html">Filipino Maid </a></li>
+                                <li><a href="nigerianmmaid.html">Nigerian Maid</a></li>
+                                <li><a href="sirilankanmaid.html">Sirilankan Maid</a></li>
+                                
+                            </ul>
+                        </li>
+                        <!-- <li><a href="blog.html">Blog</a></li> -->
+                        <li><a href="contact.html">Contact</a></li>
+                            </ul>
+<script>
+(function(){
+  try {
+    var link = document.querySelector('.main-menu .has-submenu > a');
+    if (link && !link.querySelector('.dropdown-icon')) {
+      // accessibility attributes
+      link.setAttribute('aria-haspopup', 'true');
+      link.setAttribute('aria-expanded', 'false');
+
+      // create icon
+      var icon = document.createElement('i');
+      icon.className = 'fas fa-chevron-down dropdown-icon';
+      icon.setAttribute('aria-hidden', 'true');
+      icon.style.marginLeft = '6px';
+      icon.style.fontSize = '0.9em';
+
+      link.appendChild(icon);
+
+      // toggle aria-expanded on click (useful for keyboard/screen reader)
+      link.addEventListener('click', function(e){
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', (!expanded).toString());
+      });
+    }
+  } catch (e) {
+    // silent
+  }
+})();
+</script>
                         </nav>
                     </div>
 
@@ -242,7 +350,6 @@
         </div>
     </div>
 </header>
-
 
     <div class="breadcumb-wrapper" data-bg-src="assets/img/bg/breadcrumb-bg.jpg">
         <div class="breadcrumb-bottom-shape"><img src="assets/img/bg/breadcrumb-bottom.png" alt="shape"></div>
@@ -390,7 +497,7 @@
    
     
 
-   <footer class="footer-wrapper footer-layout1" data-bg-src="assets/img/bg/footer_bg_4.jpg">
+ <footer class="footer-wrapper footer-layout1" data-bg-src="assets/img/bg/footer_bg_4.jpg">
     <div class="shape-mockup movingX d-none d-xl-block" data-bottom="80px" data-left="0%">
         <img src="assets/img/shape/footer_shape_1.png" alt="shape">
     </div>
@@ -408,7 +515,7 @@
                         <div class="box-icon"><i class="fa-solid fa-location-dot"></i></div>
                         <div class="box-content">
                             <h3 class="box-title">Head Office</h3>
-                            <p class="box-text">Plot 12, Block C, DHA Phase 6, Lahore, Pakistan</p>
+                            <p class="box-text">Office no. 2 , 1st floor tauheed commercial area dha phase 5 main 26th street khi</p>
                         </div>
                     </div>
                 </div>
@@ -422,6 +529,8 @@
                             <p class="box-text">
                                 <a href="mailto:info.proficientmanpower@gmail.com">info.proficientmanpower@gmail.com</a> 
                                 <a href="tel:+923453478801">0345-3478801</a>
+                                <a href="tel:+923222690406">0322-2690406</a>
+
                             </p>
                         </div>
                     </div>
@@ -433,7 +542,7 @@
                         <div class="box-icon"><i class="fa-solid fa-clock"></i></div>
                         <div class="box-content">
                             <h3 class="box-title">Working Hours</h3>
-                            <p class="box-text">Mon-Sat : 09:00 AM - 08:00 PM <br> Sunday Closed</p>
+                            <p class="box-text">Mon-Sat : 09:00 AM - 06:00 PM <br> Sunday Closed</p>
                         </div>
                     </div>
                 </div>
@@ -513,11 +622,44 @@
         </div>
 </footer>
 
-    <div class="scroll-top">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+
+    <!-- 21: WhatsApp floating button + Scroll top -->
+    <a href="https://wa.me/923453478801" target="_blank" rel="noopener noreferrer"
+       class="whatsapp-float"
+       aria-label="Chat on WhatsApp +92 345 3478801"
+       style="position:fixed; right:20px; bottom:90px; z-index:9999; width:48px; height:48px; border-radius:50%; background:#25D366; color:#fff; display:inline-flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 6px 18px rgba(37,211,102,0.18); font-size:20px;"
+       onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 30px rgba(37,211,102,0.22)';"
+       onmouseout="this.style.transform='none'; this.style.boxShadow='0 6px 18px rgba(37,211,102,0.18)';"
+       onfocus="this.style.outline='2px solid rgba(0,0,0,0.08)';"
+       onblur="this.style.outline='none';">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span class="visually-hidden">Chat on WhatsApp</span>
+    </a>
+
+    <div class="scroll-top" aria-label="Scroll to top" role="button" tabindex="0"
+         style="position:fixed; right:20px; bottom:20px; z-index:9999; width:48px; height:48px; border-radius:50%; background:transparent; display:inline-flex; align-items:center; justify-content:center; cursor:pointer;">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102" aria-hidden="true" focusable="false">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                  style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919; stroke:#0b5fd6; stroke-width:4; fill:none;"></path>
         </svg>
+        <span class="visually-hidden">Scroll to top</span>
     </div>
+
+    <script>
+      // basic keyboard/click handler for scroll-top
+      (function(){
+        var scrollBtn = document.querySelector('.scroll-top');
+        if (!scrollBtn) return;
+        function scrollToTop(){
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        scrollBtn.addEventListener('click', scrollToTop);
+        scrollBtn.addEventListener('keypress', function(e){
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); scrollToTop(); }
+        });
+      })();
+    </script></a>
+
 
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>

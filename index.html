@@ -22,10 +22,10 @@
     <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
-     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/Proficient man power icon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/Proficient man power icon.jpg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/Proficient man power icon.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/Proficient man power icon.jpg">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
@@ -44,14 +44,7 @@
 </head>
 
 <body>
-    <!-- 04: Preloader -->
-    <div class="preloader">
-        <button class="th-btn preloaderCls">Cancel Preloader</button>
-        <div class="preloader-inner">
-            <div class="loader"></div>
-        </div>
-    </div>
-
+    
     
 
     <!-- 06: Popup search -->
@@ -66,31 +59,85 @@
     
 
     <!-- 07: Mobile menu wrapper -->
-    <div class="th-menu-wrapper">
-        <div class="th-menu-area text-center">
-            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-            <div class="mobile-logo">
-                <a href="index.html">
-                    <img src="assets/img/logo.png" alt="Kleanix" style="width:100px; height:100px; display:block;">
-                </a>
-            </div>
-            <div class="th-mobile-menu">
-                <ul>
-                                    <li>
-                                        <a href="index.html">Home</a>  
-                                    </li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li >
-                                        <a href="service.html">Services</a>                    
-                                    </li>
-                                    <!-- <li>
-                                        <a href="blog.html">Blog</a>    
-                                    </li> -->
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-            </div>
+   <div class="th-menu-wrapper">
+    <div class="th-menu-area text-center">
+
+        <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+
+        <div class="mobile-logo">
+            <a href="index.html">
+                <img src="assets/img/Proficient man power logo-02.png" alt="Kleanix" style="width:300px; height:80px; display:block;">
+            </a>
+        </div>
+
+        <div class="th-mobile-menu">
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+
+                <!-- SERVICES DROPDOWN -->
+                <li class="has-submenu">
+                    <a href="#">
+                        Services 
+                        <i class="fas fa-chevron-down dropdown-icon" style="margin-left:6px; font-size:0.9em; transition:0.3s;"></i>
+                    </a>
+
+                    <ul class="sub-menu" style="display:none; padding-left:15px;">
+                        <li><a href="maidservice.html">Maid Services</a></li>
+                        <li><a href="nannyservice.html">Babysitter / Nanny</a></li>
+                        <li><a href="attendentservice.html">Patient Attendant</a></li>
+                        <li><a href="service.html">Cook / Chef</a></li>
+                        <li><a href="service.html">Driver Services</a></li>
+                        <li><a href="service.html">Office Boy</a></li>
+                        <li><a href="service.html">Security Guard</a></li>
+                        <li><a href="service.html">Housekeeping Staff</a></li>
+                        <li><a href="service.html">Receptionist</a></li>
+                    </ul>
+                </li>
+
+                <!-- FOREIGN STAFF DROPDOWN -->
+                <li class="has-submenu">
+                    <a href="#">
+                        Foreign Staff
+                        <i class="fas fa-chevron-down dropdown-icon" style="margin-left:6px; font-size:0.9em; transition:0.3s;"></i>
+                    </a>
+
+                    <ul class="sub-menu" style="display:none; padding-left:15px;">
+                        <li><a href="service.html">Filipino Maid</a></li>
+                        <li><a href="service.html">Nigerian Maid</a></li>
+                        <li><a href="service.html">Sirilankan Maid</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
         </div>
     </div>
+</div>
+
+<!-- INLINE JS -->
+<script>
+    document.querySelectorAll(".has-submenu > a").forEach(item => {
+        item.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            let parent = this.parentElement;
+            let submenu = parent.querySelector(".sub-menu");
+            let icon = this.querySelector(".dropdown-icon");
+
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+                icon.style.transform = "rotate(0deg)";
+            } else {
+                submenu.style.display = "block";
+                icon.style.transform = "rotate(180deg)";
+            }
+        });
+    });
+</script>
+
 
 
     
@@ -129,7 +176,7 @@
                   style="width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.08); border-radius:6px; color:#fff; font-size:12px; transition: transform .14s ease, background-color .14s ease, color .14s ease, box-shadow .14s ease; will-change: transform, background-color, color;">
                 <i class="fas fa-clock" aria-hidden="true" style="font-size:12px;"></i>
              </span>
-             <span style="font-size:12px;">Tue - Sat 08:00 AM – 05:00 PM</span>
+             <span style="font-size:12px;">Tue - Sat 09:00 AM – 06:00 PM</span>
           </div>
        </div>
 
@@ -146,14 +193,14 @@
              <i class="fab fa-facebook-f" aria-hidden="true" style="font-size:13px;"></i>
           </a>
 
-          <a class="social-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+          <a class="social-btn" href="https://wa.me/923453478801" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
             style="width:30px; height:30px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; text-decoration:none; background:rgba(0,0,0,0.12); transition: transform .14s ease, background-color .14s ease, color .14s ease, box-shadow .14s ease; will-change: transform, background-color, color; font-size:13px;"
             onmouseover="this.style.background='#ffffff'; this.style.color='#0b5fd6'; this.style.transform='translateY(-2px) scale(1.04)'; this.style.boxShadow='0 8px 20px rgba(11,95,214,0.12)';"
             onmouseout="this.style.background='rgba(0,0,0,0.12)'; this.style.color='#fff'; this.style.transform='none'; this.style.boxShadow='none';"
             onfocus="this.style.background='#ffffff'; this.style.color='#0b5fd6'; this.style.transform='translateY(-2px) scale(1.04)'; this.style.boxShadow='0 8px 20px rgba(11,95,214,0.12)'; this.style.outline='2px solid rgba(255,255,255,0.12)'; this.style.outlineOffset='3px';"
             onblur="this.style.background='rgba(0,0,0,0.12)'; this.style.color='#fff'; this.style.transform='none'; this.style.boxShadow='none'; this.style.outline='none';"
             >
-             <i class="fab fa-linkedin-in" aria-hidden="true" style="font-size:13px;"></i>
+             <i class="fab fa-whatsapp" aria-hidden="true" style="font-size:13px;"></i>
           </a>
 
           <a class="social-btn" href="https://www.instagram.com/proficient_manpower/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
@@ -206,7 +253,7 @@
                     <div class="col-auto">
                         <div class="header-logo">
                             <a href="index.html">
-                                <img src="assets/img/logo.png" style="width:80px; height:auto;" alt="Kleanix">
+                                <img src="assets/img/Proficient man power logo-02.png" style="width:300px; height:80px;" alt="Kleanix">
                             </a>
                         </div>
                     </div>
@@ -215,12 +262,63 @@
                     <div class="col-auto d-none d-lg-inline-block">
                         <nav class="main-menu" style="font-size:14px;">
                             <ul style="display:flex; gap:16px; margin:0; padding:0; list-style:none;">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="service.html">Services</a></li>
-                                <!-- <li><a href="blog.html">Blog</a></li> -->
-                                <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="has-submenu">
+                            <a href="#">Services</a>
+                            <ul class="sub-menu">
+                                <li><a href="maidservice.html">Maid Services</a></li>
+                                <li><a href="nannyservice.html">Babysitter / Nanny</a></li>
+                                <li><a href="attendentservice.html">Patient Attendant</a></li>
+                                <li><a href="cookservice.html">Cook / Chef</a></li>
+                                <li><a href="driverservice.html">Driver Services</a></li>
+                                <li><a href="officeboyservice.html">Office Boy</a></li>
+                                <li><a href="securityguardservice.html">Security Guard</a></li>
+                                <li><a href="housekeepingservice.html">Housekeeping Staff</a></li>
+                                <li><a href="nurseservice.html">Nurse</a></li>
                             </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="#">Foreign Staff <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true" style="margin-left:6px; font-size:0.9em;"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="filipinomaid.html">Filipino Maid </a></li>
+                                <li><a href="nigerianmmaid.html">Nigerian Maid</a></li>
+                                <li><a href="sirilankanmaid.html">Sirilankan Maid</a></li>
+                                
+                            </ul>
+                        </li>
+                        <!-- <li><a href="blog.html">Blog</a></li> -->
+                        <li><a href="contact.html">Contact</a></li>
+                            </ul>
+<script>
+(function(){
+  try {
+    var link = document.querySelector('.main-menu .has-submenu > a');
+    if (link && !link.querySelector('.dropdown-icon')) {
+      // accessibility attributes
+      link.setAttribute('aria-haspopup', 'true');
+      link.setAttribute('aria-expanded', 'false');
+
+      // create icon
+      var icon = document.createElement('i');
+      icon.className = 'fas fa-chevron-down dropdown-icon';
+      icon.setAttribute('aria-hidden', 'true');
+      icon.style.marginLeft = '6px';
+      icon.style.fontSize = '0.9em';
+
+      link.appendChild(icon);
+
+      // toggle aria-expanded on click (useful for keyboard/screen reader)
+      link.addEventListener('click', function(e){
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', (!expanded).toString());
+      });
+    }
+  } catch (e) {
+    // silent
+  }
+})();
+</script>
                         </nav>
                     </div>
 
@@ -393,6 +491,217 @@
         </div>
     </div>
 </div>
+
+
+  <section class="service-sec-3 overflow-hidden space" id="service-sec" data-bg-src="assets/img/bg/service-3-bg.png">
+         <div class="shape-mockup jump service-3-shape-1"><img src="assets/img/shape/servicce-2-shape-theme2.svg" alt="shape"></div>
+         <div class="shape-mockup jump-reverse service-3-shape-2"><img src="assets/img/shape/home-3-shape-1.svg" alt="shape"></div>
+         <div class="container">
+            <div class="row gy-30 align-items-center justify-content-between">
+               <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-10">
+                  <div class="title-area text-center text-xl-start">
+                     <span class="sub-title style-3"><span class="left"></span> Our Services</span>
+                     <h2 class="sec-title">The Services We Provide For Our Customer</h2>
+                  </div>
+               </div>
+               <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-8 d-none d-xl-block">
+                  <div class="service-3-right-content">
+                     <p>These services are designed to maintain cleanliness, hygiene, and overall appearance of homes, offering convenience to homeowners and ensuring a healthy living environment. Routine cleaning tasks performed weekly or bi-weekly.</p>
+                  </div>
+               </div>
+            </div>
+  <div class="row gy-30 align-items-center">
+   <div class="col-xl-5 mb-xl-0">
+      <div class="service-3-wrap">
+         <div class="swiper th-slider service-3-slider" id="service-3" 
+              data-slider-options='{"breakpoints":{"0":{"slidesPerView":3,"mousewheel":false},"576":{"slidesPerView":"3","mousewheel":false},"768":{"slidesPerView":"3","mousewheel":false},"992":{"slidesPerView":"3","mousewheel":false},"1200":{"slidesPerView":"3"}},"direction":"vertical","mousewheel":true}'>
+            <div class="swiper-wrapper">
+
+               <!-- 1. Maid Services -->
+               <div class="swiper-slide">
+                  <div class="service-3-wrap">
+                     <div class="service-3-card" data-bg-src="assets/img/bg/service-3-card-bg.png">
+                        <a href="maidservice.html" class="link-service-3"><i class="fa-regular fa-arrow-right-long"></i></a>
+                        <div class="service-3-card__icon" 
+                             style="background: linear-gradient(135deg, #6995B1, #DEAD6F); 
+                                    width: 70px; height: 70px; border-radius: 50%; 
+                                    display: flex; justify-content: center; align-items: center; 
+                                    margin: auto; animation: pulse 2s infinite; transition: all 0.4s ease;">
+                           <i class="fa-solid fa-broom" style="color: #fff; font-size: 32px;"></i>
+                        </div>
+                        <div class="service-3-card__content">
+                           <h3 class="box-title"><a href="maidservice.html">Maid Services</a></h3>
+                           <p class="box-text">Trained, verified, and reliable house maids for daily chores.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 2. Babysitter / Nanny -->
+               <div class="swiper-slide">
+                  <div class="service-3-wrap">
+                     <div class="service-3-card" data-bg-src="assets/img/bg/service-3-card-bg.png">
+                        <a href="nannyservice.html" class="link-service-3"><i class="fa-regular fa-arrow-right-long"></i></a>
+                        <div class="service-3-card__icon" 
+                             style="background: linear-gradient(135deg, #6995B1, #DEAD6F); 
+                                    width: 70px; height: 70px; border-radius: 50%; 
+                                    display: flex; justify-content: center; align-items: center; 
+                                    margin: auto; animation: pulse 2s infinite; transition: all 0.4s ease;">
+                           <i class="fa-solid fa-baby" style="color: #fff; font-size: 32px;"></i>
+                        </div>
+                        <div class="service-3-card__content">
+                           <h3 class="box-title"><a href="nannyservice.html">Babysitter / Nanny</a></h3>
+                           <p class="box-text">Professional and caring babysitters for your children.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 3. Patient Attendant -->
+               <div class="swiper-slide">
+                  <div class="service-3-wrap">
+                     <div class="service-3-card" data-bg-src="assets/img/bg/service-3-card-bg.png">
+                        <a href="patientattendantservice.html" class="link-service-3"><i class="fa-regular fa-arrow-right-long"></i></a>
+                        <div class="service-3-card__icon" 
+                             style="background: linear-gradient(135deg, #6995B1, #DEAD6F); 
+                                    width: 70px; height: 70px; border-radius: 50%; 
+                                    display: flex; justify-content: center; align-items: center; 
+                                    margin: auto; animation: pulse 2s infinite; transition: all 0.4s ease;">
+                           <i class="fa-solid fa-hospital-user" style="color: #fff; font-size: 32px;"></i>
+                        </div>
+                        <div class="service-3-card__content">
+                           <h3 class="box-title"><a href="patientattendantservice.html">Patient Attendant</a></h3>
+                           <p class="box-text">Qualified attendants for patient care at home or hospitals.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 4. Cook / Chef -->
+               <div class="swiper-slide">
+                  <div class="service-3-wrap">
+                     <div class="service-3-card" data-bg-src="assets/img/bg/service-3-card-bg.png">
+                        <a href="cookchefservice.html" class="link-service-3"><i class="fa-regular fa-arrow-right-long"></i></a>
+                        <div class="service-3-card__icon" 
+                             style="background: linear-gradient(135deg, #6995B1, #DEAD6F); 
+                                    width: 70px; height: 70px; border-radius: 50%; 
+                                    display: flex; justify-content: center; align-items: center; 
+                                    margin: auto; animation: pulse 2s infinite; transition: all 0.4s ease;">
+                           <i class="fa-solid fa-utensils" style="color: #fff; font-size: 32px;"></i>
+                        </div>
+                        <div class="service-3-card__content">
+                           <h3 class="box-title"><a href="cookchefservice.html">Cook / Chef</a></h3>
+                           <p class="box-text">Experienced chefs for home or commercial kitchens.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 5. Driver Services -->
+               <div class="swiper-slide">
+                  <div class="service-3-wrap">
+                     <div class="service-3-card" data-bg-src="assets/img/bg/service-3-card-bg.png">
+                        <a href="driverservices.html" class="link-service-3"><i class="fa-regular fa-arrow-right-long"></i></a>
+                        <div class="service-3-card__icon" 
+                             style="background: linear-gradient(135deg, #6995B1, #DEAD6F); 
+                                    width: 70px; height: 70px; border-radius: 50%; 
+                                    display: flex; justify-content: center; align-items: center; 
+                                    margin: auto; animation: pulse 2s infinite; transition: all 0.4s ease;">
+                           <i class="fa-solid fa-car" style="color: #fff; font-size: 32px;"></i>
+                        </div>
+                        <div class="service-3-card__content">
+                           <h3 class="box-title"><a href="driverservices.html">Driver Services</a></h3>
+                           <p class="box-text">Professional drivers for home or office transportation.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 6. Office Boy -->
+               <div class="swiper-slide">
+                  <div class="service-3-wrap">
+                     <div class="service-3-card" data-bg-src="assets/img/bg/service-3-card-bg.png">
+                        <a href="officeboyservice.html" class="link-service-3"><i class="fa-regular fa-arrow-right-long"></i></a>
+                        <div class="service-3-card__icon" 
+                             style="background: linear-gradient(135deg, #6995B1, #DEAD6F); 
+                                    width: 70px; height: 70px; border-radius: 50%; 
+                                    display: flex; justify-content: center; align-items: center; 
+                                    margin: auto; animation: pulse 2s infinite; transition: all 0.4s ease;">
+                           <i class="fa-solid fa-user-tie" style="color: #fff; font-size: 32px;"></i>
+                        </div>
+                        <div class="service-3-card__content">
+                           <h3 class="box-title"><a href="officeboyservice.html">Office Boy</a></h3>
+                           <p class="box-text">Reliable office support staff for errands & chores.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 7. Security Guard -->
+               <div class="swiper-slide">
+                  <div class="service-3-wrap">
+                     <div class="service-3-card" data-bg-src="assets/img/bg/service-3-card-bg.png">
+                        <a href="securityguardservice.html" class="link-service-3"><i class="fa-regular fa-arrow-right-long"></i></a>
+                        <div class="service-3-card__icon" 
+                             style="background: linear-gradient(135deg, #6995B1, #DEAD6F); 
+                                    width: 70px; height: 70px; border-radius: 50%; 
+                                    display: flex; justify-content: center; align-items: center; 
+                                    margin: auto; animation: pulse 2s infinite; transition: all 0.4s ease;">
+                           <i class="fa-solid fa-shield" style="color: #fff; font-size: 32px;"></i>
+                        </div>
+                        <div class="service-3-card__content">
+                           <h3 class="box-title"><a href="securityguardservice.html">Security Guard</a></h3>
+                           <p class="box-text">Trained security staff for homes & businesses.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 8. Housekeeping Staff -->
+               <div class="swiper-slide">
+                  <div class="service-3-wrap">
+                     <div class="service-3-card" data-bg-src="assets/img/bg/service-3-card-bg.png">
+                        <a href="housekeepingstaffservice.html" class="link-service-3"><i class="fa-regular fa-arrow-right-long"></i></a>
+                        <div class="service-3-card__icon" 
+                             style="background: linear-gradient(135deg, #6995B1, #DEAD6F); 
+                                    width: 70px; height: 70px; border-radius: 50%; 
+                                    display: flex; justify-content: center; align-items: center; 
+                                    margin: auto; animation: pulse 2s infinite; transition: all 0.4s ease;">
+                           <i class="fa-solid fa-broom" style="color: #fff; font-size: 32px;"></i>
+                        </div>
+                        <div class="service-3-card__content">
+                           <h3 class="box-title"><a href="housekeepingstaffservice.html">Housekeeping Staff</a></h3>
+                           <p class="box-text">Complete home cleaning & maintenance staff.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            
+        
+
+            </div>
+            <button data-slider-next="#blogSlider1" class="slider-arrow slider-next"><i class="fa-solid fa-angle-down"></i></button>
+         </div>
+      </div>
+   </div>
+   <div class="col-xl-7 gx-60 mb-xl-0">
+      <div class="img-box about-3"><img src="assets/img/service/service_3_1.jpg" alt="service-img"></div>
+   </div>
+</div>
+
+<!-- Pulsing animation keyframes -->
+<style>
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+  50% { transform: scale(1.15); box-shadow: 0 0 25px rgba(222,173,111,0.6); }
+  100% { transform: scale(1); box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+}
+</style>
+
+
+         </div>
+      </section>
 
 
     <!-- 12: Video Section -->
@@ -830,12 +1139,13 @@
 
     <!-- 20: Footer -->
  <footer class="footer-wrapper footer-layout1" data-bg-src="assets/img/bg/footer_bg_4.jpg">
-    <div class="shape-mockup movingX d-none d-xl-block" data-bottom="80px" data-left="0%">
-        <img src="assets/img/shape/footer_shape_1.png" alt="shape">
-    </div>
     <div class="shape-mockup moving d-none d-xl-block" data-bottom="80px" data-right="5%">
         <img src="assets/img/shape/footer_shape_2.png" alt="shape">
     </div>
+    <div class="shape-mockup movingX d-none d-xl-block" data-bottom="80px" data-left="0%">
+        <img src="assets/img/shape/footer_shape_1.png" alt="shape">
+    </div>
+    
 
     <div class="container">
         <div class="footer-top-wrap">
@@ -847,7 +1157,7 @@
                         <div class="box-icon"><i class="fa-solid fa-location-dot"></i></div>
                         <div class="box-content">
                             <h3 class="box-title">Head Office</h3>
-                            <p class="box-text">Plot 12, Block C, DHA Phase 6, Lahore, Pakistan</p>
+                            <p class="box-text">Office no. 2 , 1st floor tauheed commercial area dha phase 5 main 26th street khi</p>
                         </div>
                     </div>
                 </div>
@@ -861,6 +1171,8 @@
                             <p class="box-text">
                                 <a href="mailto:info.proficientmanpower@gmail.com">info.proficientmanpower@gmail.com</a> 
                                 <a href="tel:+923453478801">0345-3478801</a>
+                                <a href="tel:+923222690406">0322-2690406</a>
+
                             </p>
                         </div>
                     </div>
@@ -872,7 +1184,7 @@
                         <div class="box-icon"><i class="fa-solid fa-clock"></i></div>
                         <div class="box-content">
                             <h3 class="box-title">Working Hours</h3>
-                            <p class="box-text">Mon-Sat : 09:00 AM - 08:00 PM <br> Sunday Closed</p>
+                            <p class="box-text">Mon-Sat : 09:00 AM - 06:00 PM <br> Sunday Closed</p>
                         </div>
                     </div>
                 </div>
@@ -892,14 +1204,11 @@
                         <div class="th-widget-about">
                            <div class="about-logo">
                         <a href="index.html">
-                        <img src="assets/img/logo.png" alt="Proficient Manpower" style="width:200px; height:auto;">
+                        <img src="assets/img/Proficient man power logo-02.png" alt="Proficient Manpower" style="width:300px; height:100px; margin-bottom: 100px;">
                             </a>
                             </div>
 
-                            <p class="about-text">
-                                
-                            </p>
-
+                        
                             <div class="th-social">
                                 <a href="https://www.facebook.com/proficientmanpowerofficial"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://www.instagram.com/proficient_manpower/"><i class="fab fa-instagram"></i></a>
@@ -953,12 +1262,42 @@
 </footer>
 
 
-    <!-- 21: Scroll top -->
-    <div class="scroll-top">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+    <!-- 21: WhatsApp floating button + Scroll top -->
+    <a href="https://wa.me/923453478801" target="_blank" rel="noopener noreferrer"
+       class="whatsapp-float"
+       aria-label="Chat on WhatsApp +92 345 3478801"
+       style="position:fixed; right:20px; bottom:90px; z-index:9999; width:48px; height:48px; border-radius:50%; background:#25D366; color:#fff; display:inline-flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 6px 18px rgba(37,211,102,0.18); font-size:20px;"
+       onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 30px rgba(37,211,102,0.22)';"
+       onmouseout="this.style.transform='none'; this.style.boxShadow='0 6px 18px rgba(37,211,102,0.18)';"
+       onfocus="this.style.outline='2px solid rgba(0,0,0,0.08)';"
+       onblur="this.style.outline='none';">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span class="visually-hidden">Chat on WhatsApp</span>
+    </a>
+
+    <div class="scroll-top" aria-label="Scroll to top" role="button" tabindex="0"
+         style="position:fixed; right:20px; bottom:20px; z-index:9999; width:48px; height:48px; border-radius:50%; background:transparent; display:inline-flex; align-items:center; justify-content:center; cursor:pointer;">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102" aria-hidden="true" focusable="false">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                  style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919; stroke:#0b5fd6; stroke-width:4; fill:none;"></path>
         </svg>
+        <span class="visually-hidden">Scroll to top</span>
     </div>
+
+    <script>
+      // basic keyboard/click handler for scroll-top
+      (function(){
+        var scrollBtn = document.querySelector('.scroll-top');
+        if (!scrollBtn) return;
+        function scrollToTop(){
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        scrollBtn.addEventListener('click', scrollToTop);
+        scrollBtn.addEventListener('keypress', function(e){
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); scrollToTop(); }
+        });
+      })();
+    </script></a>
 
     <!-- 22: scripts -->
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
